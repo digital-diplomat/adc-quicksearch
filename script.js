@@ -2,13 +2,13 @@
 
 var csRec = document.getElementById("ctl00_responsiveBody_txtCsReceiver"); // Prompt for first 3 digits.
 csRec.value = window.prompt("CS Receiver?");
-if (csRec.value == '') {  // If you press "Cancel" or enter nothing...
+if (csRec.value == "") {  // If you press "Cancel" or enter nothing...
   alert("Cancelled.");
   return;                 // The script will stop.
 }
 var csAcct = document.getElementById("ctl00_responsiveBody_txtCsAccount"); // Prompt for last 4 digits.
 csAcct.value = window.prompt("CS Acct #?");
-if (csAcct.value == '') {
+if (csAcct.value == "") {
   alert("Cancelled.");
   return;
 }
