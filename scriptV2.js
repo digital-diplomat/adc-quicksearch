@@ -6,10 +6,8 @@ function() {
         alert("Cancelled."); // End script
         return;
     }
-    var csRec = document.getElementById("ctl00_responsiveBody_txtCsReceiver"); // Set receiver val
-    csRec.value = csArray[0];
-    var csAcct = document.getElementById("ctl00_responsiveBody_txtCsAccount"); // Set Acct# val
-    csAcct.value = csArray[1];
+    document.getElementById("ctl00_responsiveBody_txtCsReceiver").value = csArray[0]; // Set receiver val
+    document.getElementById("ctl00_responsiveBody_txtCsAccount").value = csArray[1]; // Set Acct# val
     document.getElementById("ctl00_responsiveBody_chkIncludeTerminated").checked = (csArray.length = 3 && /t|T/.test(csArray[2])); // If "T" modifier added, check termed box
     document.getElementById("ctl00_responsiveBody_btnSearch").click(); // Click "Search"
 }();
