@@ -10,7 +10,6 @@ javascript:(function() {
     var csRec = document.getElementById("ctl00_responsiveBody_txtCsReceiver"); // Receiver # (first 3)
     var termCheck = document.getElementById("ctl00_responsiveBody_chkIncludeTerminated"); // Incl. Termed Checkbox
     
-    // Main script
     if (csAcct.value != "") { // If a field has input already...
         currentText = csRec.value + "." + csAcct.value; // ...use that as the prompt default.
     }
@@ -24,8 +23,8 @@ javascript:(function() {
         alert("Cancelled."); // End script
         return;
     }
-    csAcct.value = csArray[0]; // Set receiver val
-    csRec.value = csArray[1]; // Set Acct# val
+    csRec.value = csArray[0]; // Set receiver val
+    csAcct.value = csArray[1]; // Set Acct# val
     termCheck.checked = (csArray.length >= 3 && /t|T/.test(csArray[2])); // Check termed?
     document.getElementById("ctl00_responsiveBody_btnSearch").click(); // Click "Search"
 }());
