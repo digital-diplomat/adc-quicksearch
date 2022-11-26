@@ -2,7 +2,8 @@ javascript:(function() {
     var currentText = ""; // Default prompt
     var csAcct = document.getElementById("ctl00_responsiveBody_txtCsAccount"); // Acct # (last 4)
     if (!csAcct) { // If search box not found, show error and end script.
-        alert("Could not find search field! This script will only work on the NEW Alarm.com customer search page.");
+        alert("Could not find search field! This script will only work on the NEW Alarm.com customer search page.\n" +
+              "https://alarmadmin.alarm.com/Support/FindCustomer.aspx");
         return;
     }
     var csRec = document.getElementById("ctl00_responsiveBody_txtCsReceiver"); // Receiver # (first 3)
