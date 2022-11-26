@@ -1,6 +1,10 @@
 javascript:(function() {
     var currentText = ""; // Default prompt
     var csAcct = document.getElementById("ctl00_responsiveBody_txtCsAccount"); // Acct # (last 4)
+    if (!csAcct) { // If search box not found, show error and end script.
+        alert("Could not find search field! This script will only work on the NEW Alarm.com customer search page.");
+        return;
+    }
     var csRec = document.getElementById("ctl00_responsiveBody_txtCsReceiver"); // Receiver # (first 3)
     var termCheck = document.getElementById("ctl00_responsiveBody_chkIncludeTerminated"); // Incl. Termed Checkbox
     
@@ -22,4 +26,4 @@ javascript:(function() {
     csRec.value = csArray[1]; // Set Acct# val
     termCheck.checked = (csArray.length >= 3 && /t|T/.test(csArray[2])); // Check termed?
     document.getElementById("ctl00_responsiveBody_btnSearch").click(); // Click "Search"
-}())
+}());
