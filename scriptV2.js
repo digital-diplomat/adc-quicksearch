@@ -10,7 +10,7 @@ javascript:(function() {
     var csRec = document.getElementById("ctl00_responsiveBody_txtCsReceiver"); // Receiver # (first 3)
     var termCheck = document.getElementById("ctl00_responsiveBody_chkIncludeTerminated"); // Incl. Termed Checkbox
     
-    if (csAcct.value != "") { // If a field has input already...
+    if (csRec.value != csAcct.value) { // If a field has input already...
         currentText = csRec.value + "." + csAcct.value; // ...use that as the prompt default.
     }
     if (termCheck.checked) { // Do the same with 'T' modifier.
