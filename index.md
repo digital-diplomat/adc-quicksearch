@@ -1,13 +1,17 @@
 ## You know, it's usually unwise to run random JavaScript code...  
 ### ...but you can trust me. We all get background checked. &#128513;
 
-Click and drag this link to your bookmarks bar: <a href='javascript:(function(){var currentText="";var csAcct=document.getElementById("ctl00_responsiveBody_txtCsAccount");if(!csAcct){if(confirm("This script will only work on the NEW Alarm.com customer search page.\nGo there now?")){window.location.href="https://alarmadmin.alarm.com/Support/FindCustomer.aspx"}return}var csRec=document.getElementById("ctl00_responsiveBody_txtCsReceiver");var termCheck=document.getElementById("ctl00_responsiveBody_chkIncludeTerminated");if(csAcct.value!=""){currentText=csRec.value+"."+csAcct.value;}if(termCheck.checked){currentText+=".T"}var fullCS=prompt("CS#? Add \".T\" for termed accts.",currentText);try{var csArray=fullCS.split(/\./);}catch(typeError){alert("Cancelled.");return}csRec.value=csArray[0];csAcct.value=csArray[1];termCheck.checked=(csArray.length>=3&&/t|T/.test(csArray[2]));document.getElementById("ctl00_responsiveBody_btnSearch").click();}());'>ADC QuickSearch!</a>
+Click and drag this link to your bookmarks bar: <a href='javascript:(function(){var currentText="";var csAcct=document.getElementById("ctl00_responsiveBody_txtCsAccount");if(!csAcct){if(confirm("This script will only work on the NEW Alarm.com customer search page.\nGo there now?")){window.location.href="https://alarmadmin.alarm.com/Support/FindCustomer.aspx"}return}var csRec=document.getElementById("ctl00_responsiveBody_txtCsReceiver");var termCheck=document.getElementById("ctl00_responsiveBody_chkIncludeTerminated");if(csRec.value!=csAcct.value){currentText=csRec.value+"."+csAcct.value;}if(termCheck.checked){currentText+=".T"}var fullCS=prompt("CS#? Add \".T\" for termed accts.",currentText);try{var csArray=fullCS.split(/\./);}catch(typeError){alert("Cancelled.");return}csRec.value=csArray[0];csAcct.value=csArray[1];termCheck.checked=(csArray.length>=3&&/t|T/.test(csArray[2]));document.getElementById("ctl00_responsiveBody_btnSearch").click();}());'>ADC QuickSearch!</a>
 
 To use this bookmarklet, click on it while on the main (_new_) search page in the
 [ADC Partner Portal](https://alarmadmin.alarm.com/Support/FindCustomer.aspx).
 You can also use it to redirect to that webpage, meaning **this script can replace your Alarm.com bookmark entirely!**
 
 ### Changelog
+
+#### 2.4.2
+
+- Fixed bug that would cause default value not to populate if only the Receiver number is entered
 
 #### 2.4.1
 
