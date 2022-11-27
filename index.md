@@ -1,3 +1,5 @@
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
 ## You know, it's usually unwise to run random JavaScript code...  
 ### ...but you can trust me. We all get background checked. &#128513;
 
