@@ -1,4 +1,7 @@
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <title>ADC QuickSearch!</title>
+</head>
 
 ## You know, it's usually unwise to run random JavaScript code...  
 ### ...but you can trust me. We all get background checked. &#128513;
