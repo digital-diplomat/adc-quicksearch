@@ -11,7 +11,7 @@ javascript:(function() {
     var termCheck = document.getElementById("ctl00_responsiveBody_chkIncludeTerminated"); // Incl. Termed Checkbox
     
     if (csRec.value != csAcct.value) { // If a field has input already...
-        currentText = csRec.value + "." + csAcct.value; // ...use that as the prompt default.
+        currentText = csRec.value + csAcct.value; // ...use that as the prompt default.
     }
     if (termCheck.checked) { // Do the same with 'T' modifier.
         currentText += ".T";
@@ -23,7 +23,7 @@ javascript:(function() {
         alert("Cancelled."); // End script
         return;
     }
-    csRec.value = csArray[0]; // Set receiver val
+    csRec.value = csArray[0] + "."; // Set receiver val, requires dot to search correctly.
     csAcct.value = csArray[1]; // Set Acct# val
     termCheck.checked = (csArray.length >= 3 && /t|T/.test(csArray[2])); // Check termed?
     document.getElementById("ctl00_responsiveBody_btnSearch").click(); // Click "Search"
