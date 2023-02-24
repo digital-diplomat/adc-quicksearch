@@ -1,11 +1,8 @@
 javascript:(function() {
     var currentText = ""; // Default prompt
     var csAcct = document.getElementById("ctl00_responsiveBody_txtCsAccount"); // Acct # (last 4)
-    if (!csAcct) { // If search box not found, show error and prompt for redirect.
-        if (confirm("This script will only work on the NEW Alarm.com customer search page.\nGo there now?")) {
-            window.location.href = "https://alarmadmin.alarm.com/Support/FindCustomer.aspx";
-        } // If OK, go to ADC search page. Otherwise, end script.
-        return;
+    if (!csAcct) { // If search box not found, redirect to Customer Search page.
+        window.location.href = "https://alarmadmin.alarm.com/Support/FindCustomer.aspx";
     }
     var csRec = document.getElementById("ctl00_responsiveBody_txtCsReceiver"); // Receiver # (first 3)
     var termCheck = document.getElementById("ctl00_responsiveBody_chkIncludeTerminated"); // Incl. Termed Checkbox
