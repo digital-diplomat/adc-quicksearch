@@ -16,9 +16,8 @@ javascript:(function() {
     var fullCS = prompt("CS#? Add \".T\" for termed accts.", currentText); // Prompt for CS
     try {
         var csArray = fullCS.split(/\./); // Split into individual values
-    } catch (typeError) { // If cancelled or no input
-        alert("Cancelled."); // End script
-        return;
+    } catch (typeError) { // If cancelled or no input…
+        return; // …end script
     }
     csRec.value = csArray[0] + "."; // Set receiver val, requires dot to search correctly.
     csAcct.value = csArray[1]; // Set Acct# val
