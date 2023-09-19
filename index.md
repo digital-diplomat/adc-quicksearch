@@ -1,6 +1,8 @@
 # Alarm.com QuickSearch!
 
-## This script is only useful (and will only work) for security professionals with access to Alarm.com's Partner Portal. If you are not a security professional, you will probably have no idea what this is for. It's not for you. :P
+## ~~This script is only useful (and will only work) for security professionals with access to Alarm.com's Partner Portal. If you are not a security professional, you will probably have no idea what this is for. It's not for you. :P~~
+
+## Also I no longer work in this field so it probably doesn't work anymore by now, but if it does you're welcome to it.
 
 Click and drag this link to your bookmarks bar: <a href='javascript:(function(){var currentText="";var csAcct=document.getElementById("ctl00_responsiveBody_txtCsAccount");if(!csAcct){window.location.href="https://alarmadmin.alarm.com/Support/FindCustomer.aspx";return}var csRec=document.getElementById("ctl00_responsiveBody_txtCsReceiver");var termCheck=document.getElementById("ctl00_responsiveBody_chkIncludeTerminated");if(csRec.value!=csAcct.value){currentText=csRec.value+csAcct.value;}if(termCheck.checked){currentText+=".T"}var fullCS=prompt("CS#? Add \".T\" for termed accts.",currentText);try{var csArray=fullCS.split(/\./);}catch(typeError){return}csRec.value=csArray[0]+".";csAcct.value=csArray[1];termCheck.checked=(csArray.length>=3&&/t|T/.test(csArray[2]));document.getElementById("ctl00_responsiveBody_btnSearch").click();}());'>ADC QuickSearch!</a>
 
