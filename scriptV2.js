@@ -1,3 +1,9 @@
+/* Prettified version of a bookmarklet that probably doesn't work anymore.
+ * Auto-fills fields to search a customer by CS number in Alarm.com, including
+ * shorthand to search terminated accounts.
+ *
+ * - Written by Bryn Miller
+ */
 javascript:(function() {
     var currentText = ""; // Default prompt
     var csAcct = document.getElementById("ctl00_responsiveBody_txtCsAccount"); // Acct # (last 4)
